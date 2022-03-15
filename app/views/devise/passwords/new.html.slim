@@ -5,9 +5,11 @@
         = link_to "Inicio", new_session_path(resource_name), class: "text-decoration-none text-primary"
         = "/¿Olvidaste tu Contraseña?"
       = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-        = render "devise/shared/error_messages", resource: resource
         .field
           = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "tu.email@ejemplo.me", class: "field form-control rounded  border lh-lg mb-2"
+        - resource.errors.full_messages_for(:email).each do |message|
+          p[class="text-xs"]
+            = message
         .actions.d-flex.flex-row.justify-content-center
           = f.submit "Envíame las instrucciones", class: "btn btn-outline-primary lh-sm"
       .actions.d-flex.flex-row.justify-content-center

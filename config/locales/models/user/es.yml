@@ -1,0 +1,13 @@
+es:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: es necesario
+            password:
+              blank: es necesaria
+              too_short: es demasiado corto, al menos 6 caracteres
+            password_confirmation:
+              confirmation: tiene diferencias

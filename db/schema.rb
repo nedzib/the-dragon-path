@@ -51,14 +51,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_10_024923) do
     t.index ["user_id"], name: "index_courses_on_user_id"
   end
 
-  create_table "models", force: :cascade do |t|
-    t.integer "task_id", null: false
-    t.integer "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["task_id"], name: "index_models_on_task_id"
-  end
-
   create_table "profiles", force: :cascade do |t|
     t.integer "user_id", null: false
     t.string "first_name"
@@ -117,6 +109,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_10_024923) do
     t.integer "user_id", null: false
     t.integer "base_video_id", null: false
     t.integer "course_id", null: false
+    t.integer "order"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -129,7 +122,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_10_024923) do
   add_foreign_key "base_videos", "base_courses"
   add_foreign_key "courses", "base_courses"
   add_foreign_key "courses", "users"
-  add_foreign_key "models", "tasks"
   add_foreign_key "profiles", "users"
   add_foreign_key "resources", "base_courses"
   add_foreign_key "reviews", "tasks"
