@@ -20,7 +20,7 @@
 
 first_web_page = BaseCourse.create(
   title: 'Primera pagina web',
-  description: '',
+  description: 'Aquí aprenderas a crear tu primera pagina web desde lo mas básico',
   order: 1
 )
 
@@ -48,7 +48,7 @@ Resource.create(
 
 setup_course = BaseCourse.create(
   title: 'Configuración del entorno de desarrollo',
-  description: '',
+  description: 'Para desarrollar necesitaras tenerlo todo listo en tu computador, aqui puedes ver como',
   order: 2
 )
 
@@ -70,7 +70,7 @@ Resource.create(
 
 git_course = BaseCourse.create(
   title: 'Curso Git',
-  description: '',
+  description: 'Git es un software de control de versiones, esencial para el mundo laboral',
   order: 3
 )
 
@@ -86,13 +86,13 @@ Resource.create(
     { title: "git - la guía sencilla", url: "https://rogerdudler.github.io/git-guide/index.es.html", base_course: git_course }])
 
 
-BaseTask.create(title: "Primera pagina web desplegada", description: "Usando la herramienta GitHub Pages sube la primera pagina que creaste, luego coloca el link del repositorio y la url de tu pagina", base_course: html_course, task_url: "https://platzi.com/blog/github-pages/?utm_source=google&utm_medium=cpc&utm_campaign=12915366154&utm_adgroup=&utm_content=&gclid=CjwKCAiAyPyQBhB6EiwAFUuakkUM01wdY-v7QEyNVIQHB0atL4sy_TEHSz8W-pSDrRjvE3y8PBphThoC8tkQAvD_BwE&gclsrc=aw.ds" )
+BaseTask.create(title: "Primera pagina web desplegada", description: "Usando la herramienta GitHub Pages sube la primera pagina que creaste, luego coloca el link del repositorio y la url de tu pagina", base_course: git_course, task_url: "https://platzi.com/blog/github-pages/?utm_source=google&utm_medium=cpc&utm_campaign=12915366154&utm_adgroup=&utm_content=&gclid=CjwKCAiAyPyQBhB6EiwAFUuakkUM01wdY-v7QEyNVIQHB0atL4sy_TEHSz8W-pSDrRjvE3y8PBphThoC8tkQAvD_BwE&gclsrc=aw.ds" )
 
 
 # =======================
 html_course = BaseCourse.create(
   title: 'Curso HTML',
-  description: '',
+  description: 'HTML es un lenguaje de marcado que nos permite declarar la estructura de nuestra página web',
   order: 4
 )
 
@@ -119,7 +119,7 @@ BaseTask.create(title: "Album", description: "", base_course: html_course, task_
 # =======================
 css_course = BaseCourse.create(
   title: 'Curso CSS',
-  description: '',
+  description: 'CSS nos ayuda a hacer realidad el diseño de nuestra pagina, darle color, orden, tipos de letra y algunas cosas más',
   order: 5
 )
 
@@ -141,7 +141,7 @@ BaseTask.create(title: "Pricing", description: "", base_course: css_course, task
 # =======================
 flexbox_course = BaseCourse.create(
   title: 'Flexbox',
-  description: '',
+  description: 'Recomendamos primero ver CSS, Flexbox es uno de los nuevos valores HTML5 para propiedad CSS display, que nos permite maquetar nuestras páginas web de una manera mucho más fácil de lo que se hacía con la forma tradicional, en la que utilizábamos propiedades como float o position, entre otras.',
   order: 6
 )
 
@@ -174,7 +174,7 @@ BaseTask.create([
 
 grid_course = BaseCourse.create(
   title: 'CSS Grid',
-  description: '',
+  description: 'Recomendamos primero ver CSS, CSS Grid es un modelo de maquetación CSS en base a una rejilla, algo que podría no parecer tan novedoso, si tenemos en cuenta que diversas librerías de CSS lo habían intentado ya.',
   order: 7
 )
 
@@ -215,7 +215,7 @@ BaseTask.create( title: "Blog", description: "", base_course: grid_course, task_
 # =======================
 bootstrap_course = BaseCourse.create(
   title: 'Bootstrap',
-  description: '',
+  description: 'Bootstrap es un framework front-end utilizado para desarrollar aplicaciones web y sitios mobile first, o sea, con un layout que se adapta a la pantalla del dispositivo utilizado por el usuario. ¡Aprende todo sobre esta tecnología y cómo utilizarla!',
   order: 8
 )
 
@@ -257,7 +257,7 @@ BaseTask.create([
 
 customize_bootstrap_course = BaseCourse.create(
   title: 'Personalizar Bootstrap',
-  description: '',
+  description: 'Utiliza tus conocimientos para aprovechar al maximo Bootstrap',
   order: 9
 )
 
@@ -270,7 +270,7 @@ BaseTask.create(title: "Trafalgar Landing Page", description: "", base_course: c
 # =======================
 tailwind_course = BaseCourse.create(
   title: 'Tailwind',
-  description: '',
+  description: 'Tailwind CSS es un framework de CSS de código abierto​ para el diseño de páginas web. La principal característica de esta biblioteca es que, a diferencia de otras como Bootstrap, no genera una serie de clases predefinidas para elementos como botones o tablas.',
   order: 10
 )
 
